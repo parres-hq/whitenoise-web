@@ -10,35 +10,37 @@ function toggleMenu() {
 }
 </script>
 
-<header class="bg-glitch-950 text-glitch-50 flex flex-row items-center justify-between py-6 px-6 md:px-12">
-	<a href="/" class="logo-container flex items-center" style="min-height:40px">
-        <img src="/images/logomark.svg" alt="White Noise" class="logo-img h-10 w-auto" />
-    </a>
-
-    <!-- Mobile menu button -->
-    <button
-        class="md:hidden text-glitch-200 hover:text-cyan-300"
-        on:click={toggleMenu}
-        aria-label="Toggle menu"
-    >
-        {#if isMenuOpen}
-            <Close size={24} />
-        {:else}
-            <Menu size={24} />
-        {/if}
-    </button>
-
-    <!-- Navigation -->
-    <nav class="hidden md:flex flex-row items-center gap-x-2 text-glitch-200 text-lg leading-snug font-medium">
-        <a href="/privacy-matters" class="px-4 py-2 hover:text-cyan-300">Privacy Matters</a>
-        <a href="/#faqs" class="px-4 py-2 hover:text-cyan-300">FAQs</a>
-        <a href="https://habla.news/u/_@jeffg.fyi" class="px-4 py-2 hover:text-cyan-300">Updates</a>
-        <a href="https://github.com/parres-hq/whitenoise?tab=readme-ov-file#contributing" class="px-4 py-2 hover:text-cyan-300">Developers</a>
-        <a href="https://github.com/parres-hq/whitenoise/releases" target="_blank" class="px-4 py-2 hover:text-cyan-300 border-1 border-glitch-800 hover:border-cyan-300 flex flex-row gap-2 items-center">
-            Download
-            <Download size={20} class="w-5 h-5" />
+<header class="bg-glitch-950 text-glitch-50">
+    <div class="max-w-7xl mx-auto flex flex-row items-center justify-between py-6 px-6 md:px-12">
+        <a href="/" class="logo-container flex items-center" style="min-height:40px">
+            <img src="/images/logomark.svg" alt="White Noise" class="logo-img h-10 w-auto" />
         </a>
-    </nav>
+
+        <!-- Mobile menu button -->
+        <button
+            class="md:hidden text-glitch-200 hover:text-cyan-300"
+            on:click={toggleMenu}
+            aria-label="Toggle menu"
+        >
+            {#if isMenuOpen}
+                <Close size={24} />
+            {:else}
+                <Menu size={24} />
+            {/if}
+        </button>
+
+        <!-- Navigation -->
+        <nav class="hidden md:flex flex-row items-center gap-x-2 text-glitch-200 text-lg leading-snug font-medium">
+            <a href="/privacy-matters" class="px-4 py-2 hover:text-cyan-300">Privacy Matters</a>
+            <a href="/#faqs" class="px-4 py-2 hover:text-cyan-300">FAQs</a>
+            <a href="https://habla.news/u/_@jeffg.fyi" class="px-4 py-2 hover:text-cyan-300">Updates</a>
+            <a href="https://github.com/parres-hq/whitenoise?tab=readme-ov-file#contributing" class="px-4 py-2 hover:text-cyan-300">Developers</a>
+            <a href="https://github.com/parres-hq/whitenoise/releases" target="_blank" class="px-4 py-2 hover:text-cyan-300 border-1 border-glitch-800 hover:border-cyan-300 flex flex-row gap-2 items-center">
+                Download
+                <Download size={20} class="w-5 h-5" />
+            </a>
+        </nav>
+    </div>
 
     <!-- Mobile menu overlay -->
     {#if isMenuOpen}

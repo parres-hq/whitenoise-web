@@ -1,7 +1,7 @@
 <script lang="ts">
+import DownloadButton from "$lib/components/DownloadButton.svelte";
 import FeatureSection from "$lib/components/FeatureSection.svelte";
 import type { FeatureCard } from "$lib/types";
-import Download from "carbon-icons-svelte/lib/Download.svelte";
 
 const featureCards: FeatureCard[] = [
     {
@@ -56,21 +56,22 @@ const featureCards: FeatureCard[] = [
 </script>
 
 <div class="hero flex flex-col md:flex-row items-center justify-between px-0 bg-glitch-950 bg-[url('/images/blocks-background.webp')] bg-no-repeat bg-center-bottom md:bg-right bg-cover">
-    <div class="flex flex-col gap-4 max-w-xl flex-1 px-16 justify-center text-center md:text-left items-center md:items-start">
-        <h1 class="text-6xl font-bold text-glitch-50">White Noise</h1>
-        <p class="text-xl text-glitch-200 font-medium">A truly secure and private messenger that's lightning fast, infinitely scalable, and identity-free.</p>
-        <a href="https://github.com/parres-hq/white-noise/releases" target="_blank" class="bg-cyan-300 text-glitch-950 px-6 py-2 text-xl flex flex-row gap-3 items-center font-medium mt-4">
-            Download
-            <Download size={20} class="w-5 h-5" />
-        </a>
-    </div>
-    <div>
-        <img src="/images/lady-noise.webp" alt="Lady Noise Statue" class="relative max-h-[95%] max-w-[520px] object-contain drop-shadow-2xl top-8" />
+    <div class="max-w-7xl mx-auto w-full flex flex-col md:flex-row items-center justify-between px-6 md:px-12">
+        <div class="flex flex-col gap-4 max-w-xl flex-1 justify-center text-center md:text-left items-center md:items-start shrink-0">
+            <h1 class="text-6xl font-bold text-glitch-50">White Noise</h1>
+            <p class="text-xl text-glitch-200 font-medium">A truly secure and private messenger that's lightning fast, infinitely scalable, and identity-free.</p>
+            <DownloadButton />
+        </div>
+        <div class="max-w-3xl shrink">
+            <img src="/images/lady-noise.webp" alt="Lady Noise Statue" class="relative object-contain drop-shadow-2xl top-8" />
+        </div>
     </div>
 </div>
 
-<div class="flex flex-col gap-8 md:gap-12 px-4 md:px-12 py-8 md:py-12 justify-center text-center md:text-left items-center md:items-start">
-    {#each featureCards as card}
-        <FeatureSection featureCard={card} />
-    {/each}
+<div class="max-w-7xl mx-auto w-full">
+    <div class="flex flex-col gap-8 md:gap-12 px-6 md:px-12 py-8 md:py-12 justify-center text-center md:text-left items-center md:items-start">
+        {#each featureCards as card}
+            <FeatureSection featureCard={card} />
+        {/each}
+    </div>
 </div>
