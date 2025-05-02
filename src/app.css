@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+@font-face {
+    font-family: "OverusedGrotesk";
+    src: url("/fonts/OverusedGrotesk-VF.woff2") format("woff2-variations");
+    font-weight: 100 200 300 400 500 600 700 800 900;
+    font-style: normal;
+    font-display: swap;
+    font-variation-settings: "wght" 100 900, "slnt" 0 -10;
+}
+
+@theme {
+    /* Glitch */
+    --color-glitch-50: hsl(0 0% 98%);
+    --color-glitch-100: hsl(0 0% 95%);
+    --color-glitch-200: hsl(0 0% 89%);
+    --color-glitch-300: hsl(120 1% 81%);
+    --color-glitch-400: hsl(120 2% 70%);
+    --color-glitch-500: hsl(120 2% 56%);
+    --color-glitch-600: hsl(120 2% 45%);
+    --color-glitch-700: hsl(120 2% 36%);
+    --color-glitch-800: hsl(120 2% 29%);
+    --color-glitch-900: hsl(120 2% 19%);
+    --color-glitch-950: hsl(120 2% 13%);
+}
+
+html, body {
+    max-width: 100vw;
+    overflow-x: hidden;
+}
+
+img, video {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+    font-family: "OverusedGrotesk", sans-serif;
+}
