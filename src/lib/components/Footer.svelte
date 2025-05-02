@@ -14,7 +14,7 @@ import DownloadButton from "./DownloadButton.svelte";
             <a href="#faqs" class="hover:underline">FAQs</a>
             <a href="https://habla.news/u/_@jeffg.fyi" class="hover:underline">Updates</a>
             <a href="https://github.com/parres-hq/whitenoise?tab=readme-ov-file#contributing" class="hover:underline">Developers</a>
-            <span class="text-xs text-glitch-400 mt-2">©2025 White Noise</span>
+            <a href="https://parres.org" class="text-xs text-glitch-400 mt-2">©2025 Parres</a>
         </div>
     </div>
 </footer>

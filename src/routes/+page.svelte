@@ -1,4 +1,5 @@
 <script lang="ts">
+import Accordion from "$lib/components/Accordion.svelte";
 import DownloadButton from "$lib/components/DownloadButton.svelte";
 import FeatureSection from "$lib/components/FeatureSection.svelte";
 import type { FeatureCard } from "$lib/types";
@@ -53,6 +54,47 @@ const featureCards: FeatureCard[] = [
             "White Noise is a non-profit, community-driven project. We are not funded by any corporation, and we are not beholden to any government or organization. We are a group of volunteers who are passionate about privacy and security.",
     },
 ];
+
+const faqs = [
+    {
+        question: "What makes White Noise different from other encrypted chat apps?",
+        answer: "White Noise offers true decentralization, identity freedom, and advanced cryptography, making it more private and censorship-resistant than traditional encrypted messengers.",
+    },
+    {
+        question: "How does encryption work in White Noise?",
+        answer: "All messages are end-to-end encrypted using the MLS protocol, ensuring only intended recipients can read your messages. Forward secrecy and post-compromise security are built in.",
+    },
+    {
+        question: "Can governments or ISPs block White Noise?",
+        answer: "Nostr's decentralized design makes blocking nearly impossible. Users connect via independent relays, which can be self-hosted or swapped freely (and can even be connected to via Tor). Combined with MLS encryption, this makes censorship exceptionally difficult.",
+    },
+    {
+        question: "Where is my chat data stored?",
+        answer: "Your data is stored on the relays you choose to use. You can run your own relay for maximum privacy, or use trusted community relays.",
+    },
+    {
+        question: "What happens if a relay goes offline?",
+        answer: "You can seamlessly switch to another relay, or run your own. Your identity and contacts are portable, so you're never locked in.",
+    },
+    {
+        question: "Can admins remove or censor users in a group?",
+        answer: "Within a group, the group admins can remove a user but while the user is in the group, they can't be censored. There isn't any way for White Noise or anyone else on the Nostr network to stop a user from using Nostr and creating their own groups.",
+    },
+    // {
+    //     question: "Can I use White Noise on multiple devices?",
+    //     answer: "Yes, you can use White Noise on multiple devices.",
+    // },
+    {
+        question: "Is White Noise open source?",
+        answer: "Yes, White Noise is open source. You can view the source code on GitHub.",
+    },
+    {
+        question: "Is White Noise a non-profit?",
+        answer: "Yes, White Noise is run by a non-profit called Parres. We are not funded by any corporation, and we are not beholden to any government or organization.",
+    },
+];
+
+let openFaqIndex: number | null = null;
 </script>
 
 <div class="hero flex flex-col md:flex-row items-center justify-between px-0 bg-glitch-950 bg-[url('/images/blocks-background.webp')] bg-no-repeat bg-center-bottom md:bg-right bg-cover">
@@ -74,4 +116,16 @@ const featureCards: FeatureCard[] = [
             <FeatureSection featureCard={card} />
         {/each}
     </div>
+</div>
+
+<!-- FAQ Section -->
+<div class="max-w-3xl mx-auto w-full mt-8 mb-16 flex flex-col gap-2">
+    {#each faqs as faq, i}
+        <Accordion
+            question={faq.question}
+            answer={faq.answer}
+            open={openFaqIndex === i}
+            onClick={() => openFaqIndex = openFaqIndex === i ? null : i}
+        />
+    {/each}
 </div>
