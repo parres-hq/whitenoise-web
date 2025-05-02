@@ -58,39 +58,43 @@ const featureCards: FeatureCard[] = [
 const faqs = [
     {
         question: "What makes White Noise different from other encrypted chat apps?",
-        answer: "White Noise offers true decentralization, identity freedom, and advanced cryptography, making it more private and censorship-resistant than traditional encrypted messengers.",
+        answer: "White Noise combines Nostr's decentralized architecture with the Messaging Layer Security (MLS) protocol, enabling end-to-end encrypted group chats at scale. Unlike centralized apps, there's no single point of failure, and MLS ensures even large groups (1000+ users) stay secure.",
     },
     {
         question: "How does encryption work in White Noise?",
-        answer: "All messages are end-to-end encrypted using the MLS protocol, ensuring only intended recipients can read your messages. Forward secrecy and post-compromise security are built in.",
+        answer: "MLS provides *post-compromise security*: even if a device is compromised, future messages remain secure. Keys are dynamically rotated, and encryption is applied before messages hit Nostr relays, ensuring only group members can decrypt content.",
     },
     {
         question: "Can governments or ISPs block White Noise?",
-        answer: "Nostr's decentralized design makes blocking nearly impossible. Users connect via independent relays, which can be self-hosted or swapped freely (and can even be connected to via Tor). Combined with MLS encryption, this makes censorship exceptionally difficult.",
+        answer: "Nostr's decentralized design makes blocking nearly impossible. Users connect via independent relays (servers), which can be self-hosted or swapped freely. Combined with MLS encryption, this makes censorship exceptionally difficult.",
+    },
+    {
+        question: "How does White Noise handle large groups without lag?",
+        answer: "MLS optimizes key distribution efficiency, reducing overhead as groups grow. Nostr relays handle message routing, allowing horizontal scaling. Tests show groups with 1,000+ members perform smoothly.",
     },
     {
         question: "Where is my chat data stored?",
-        answer: "Your data is stored on the relays you choose to use. You can run your own relay for maximum privacy, or use trusted community relays.",
+        answer: "Messages are encrypted and distributed across Nostr relays, but *never stored permanently*. Relays can't read your data, and you can prioritize privacy-focused relays or run your own.",
     },
     {
         question: "What happens if a relay goes offline?",
-        answer: "You can seamlessly switch to another relay, or run your own. Your identity and contacts are portable, so you're never locked in.",
+        answer: "Nostr's redundancy lets users connect to multiple relays simultaneously. If one fails, others ensure message delivery. Groups remain active as long as at least one relay is operational.",
     },
     {
         question: "Can admins remove or censor users in a group?",
-        answer: "Within a group, the group admins can remove a user but while the user is in the group, they can't be censored. There isn't any way for White Noise or anyone else on the Nostr network to stop a user from using Nostr and creating their own groups.",
+        answer: "Yes. MLS allows admins to <strong>cryptographically evict</strong> users, revoking their access to future messages. Removed users can't rejoin without an invite, and past messages remain secure.",
     },
-    // {
-    //     question: "Can I use White Noise on multiple devices?",
-    //     answer: "Yes, you can use White Noise on multiple devices.",
-    // },
     {
         question: "Is White Noise open source?",
-        answer: "Yes, White Noise is open source. You can view the source code on GitHub.",
+        answer: "Yes! Like most Nostr projects, White Noise is open source, allowing audits of its MLS implementation and fostering trust in its encryption claims.",
     },
     {
-        question: "Is White Noise a non-profit?",
-        answer: "Yes, White Noise is run by a non-profit called Parres. We are not funded by any corporation, and we are not beholden to any government or organization.",
+        question: "Can I use White Noise on multiple devices?",
+        answer: "Absolutely. MLS supports 'leaf nodes' for each device, letting you join groups from phones, laptops, or tablets. Keys are securely stored on your device which allows each device to join the same groups.",
+    },
+    {
+        question: "How does White Noise ensure long-term security as technology evolves?",
+        answer: "White Noise leverages MLS's protocol agility, allowing seamless upgrades to quantum-resistant algorithms (e.g., CRYSTALS-Kyber) when standardized. Combined with Nostr's decentralized relay network—which can adopt new cryptographic primitives without central coordination—the system future-proofs itself against both computational advances and institutional interference.",
     },
 ];
 

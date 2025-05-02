@@ -2,7 +2,7 @@
 let { question, answer, open = false, onClick } = $props();
 </script>
 
-<div class="transition-all border-glitch-100 border-0 duration-200 {open ? 'bg-white border-glitch-100 border-1' : 'bg-glitch-50'}">
+<div class="transition-all border-glitch-50 border-1 duration-200 {open ? 'bg-white border-glitch-100 border-1' : 'bg-glitch-50'}">
   <button
     class="w-full flex items-center justify-between py-6 px-4 text-left focus:outline-none transition-colors {open ? 'bg-white' : 'bg-glitch-50 hover:bg-glitch-100'}"
     onclick={onClick}
@@ -22,7 +22,7 @@ let { question, answer, open = false, onClick } = $props();
   </button>
   {#if open}
     <div class="px-4 pb-6 text-glitch-700 text-base animate-fade-in">
-      {answer}
+      {@html answer}
     </div>
   {/if}
 </div>
