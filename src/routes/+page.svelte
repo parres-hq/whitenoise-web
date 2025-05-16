@@ -159,7 +159,7 @@ function toggleFaq(index: number) {
 </div>
 
 <!-- FAQ Section -->
-<div class="max-w-3xl mx-auto w-full mt-8 mb-16 flex flex-col gap-2">
+<div id="faqs" class="max-w-3xl mx-auto w-full mt-8 mb-16 flex flex-col gap-2">
     {#each faqs as faq, i}
         <Accordion
             question={faq.question}
