@@ -11,7 +11,7 @@ const featureCards: FeatureCard[] = [
         imageUrl: "/images/mask-man.webp",
         title: "Privacy & Security",
         description:
-            "White Noise protects your conversations with unbreakable cryptography, ensuring complete privacy through end-to-end encryption. Forward secrecy and post-compromise security guarantee that even if your keys are compromised, past and future conversations remain invisible to anyone who gains control.",
+            "White Noise secures conversations using strong cryptography, enforced by end-to-end encryption. With forward secrecy and post-compromise security, even if keys are exposed, your past and future messages stay hidden.",
     },
     {
         imagePosition: "right",
@@ -19,7 +19,7 @@ const featureCards: FeatureCard[] = [
         imageUrl: "/images/balloon-girl.webp",
         title: "Identity Freedom",
         description:
-            "Communicate securely without revealing personal details like phone numbers or emails. You have complete freedom to control your online identity—choose to remain fully anonymous, use a pseudonym, or your real name. Your identity, your choice.",
+            "Communicate without needing phone numbers or emails. Choose anonymity, a pseudonym, or your real name. Your identity, your rules.",
     },
     {
         imagePosition: "left",
@@ -27,7 +27,7 @@ const featureCards: FeatureCard[] = [
         imageUrl: "/images/hands.webp",
         title: "Open & Decentralized",
         description:
-            "Built on open standards (Nostr and MLS), White Noise allows your identity, data, and connections to be portable across multiple apps. This open architecture means protocols are freely available for any app to utilize, giving you the flexibility to switch to the most secure or user-friendly option without losing your identity or contacts.",
+            "Built on open standards like Nostr and the Messaging Layer Security (MLS) protocol, White Noise lets you take your identity, data, and contacts across platforms. Switch apps anytime without losing connections.",
     },
     {
         imagePosition: "right",
@@ -35,7 +35,7 @@ const featureCards: FeatureCard[] = [
         imageUrl: "/images/smoke.webp",
         title: "Distributed & Unscensorable",
         description:
-            "White Noise's decentralized network relies on thousands of independent relays worldwide, preventing any single point of failure or censorship. You can easily run your own relay on a home computer with just a few clicks, ensuring you communicate through your own infrastructure rather than depending on corporate-owned servers.",
+            "No single entity controls the network. Thousands of independent nodes worldwide ensure censorship resistance. Run your own relay in minutes, no corporate servers needed.",
     },
     {
         imagePosition: "left",
@@ -43,7 +43,7 @@ const featureCards: FeatureCard[] = [
         imageUrl: "/images/race-car.webp",
         title: "Fast, Reliable, & Scalable",
         description:
-            "White Noise is meticulously engineered for uncompromising speed, stability, and reliability. It delivers blazing-fast performance and real-time responsiveness, designed to handle everything from direct messages to large group conversations effortlessly.",
+            "Engineered for real-time performance, White Noise handles direct messages to massive groups seamlessly. Built for speed, designed for reliability.",
     },
     {
         imagePosition: "right",
@@ -57,55 +57,79 @@ const featureCards: FeatureCard[] = [
 
 const faqs = [
     {
-        question: "What makes White Noise different from other encrypted chat apps?",
-        answer: "White Noise combines Nostr's decentralized architecture with the Messaging Layer Security (MLS) protocol, enabling end-to-end encrypted group chats at scale. Unlike centralized apps, there's no single point of failure, and MLS ensures even large groups (1000+ users) stay secure.",
+        question: "What makes White Noise unique?",
+        answer: "White Noise stands out by merging Nostr&rsquo;s decentralized network with advanced encryption. Unlike traditional apps that rely on centralized servers, White Noise operates on Nostr, a system of independent relays anyone can run. This eliminates single points of failure, making the network resilient to censorship or shutdowns. Additionally, it uses the Messaging Layer Security (MLS) protocol to ensure end-to-end encryption even in massive groups, scaling securely for thousands of users without compromising speed or privacy.",
     },
     {
-        question: "How does encryption work in White Noise?",
-        answer: "White Noise uses the MLS protocol, which provides both <strong>post-compromise security</strong> and <strong>forward secrecy</strong>: even if a device is compromised, past messages are secure & future messages regain their security. Keys are dynamically rotated, and encryption is applied before messages hit Nostr relays, ensuring only group members can decrypt content.",
+        question: "How does encryption work?",
+        answer: "White Noise encrypts every message using MLS, a protocol designed for dynamic security. If a private key is leaked, past messages remain private due to forward secrecy, and future messages automatically regain protection through rotating encryption keys. This process, called post-compromise security, ensures that even if a breach occurs, attackers can&rsquo;t access ongoing conversations. All messages are encrypted before reaching Nostr relays, meaning no third party—whether the relay operator or an eavesdropper—can read the content.",
     },
     {
         question: "Can governments or ISPs block White Noise?",
-        answer: "Nostr's decentralized design makes blocking nearly impossible. Users connect via independent relays (servers), which can be self-hosted or swapped freely. Combined with MLS encryption, this makes censorship exceptionally difficult.",
+        answer: "Blocking White Noise is extremely difficult. Nostr&rsquo;s decentralized structure lets users switch relays instantly if one is censored or taken down. Relays can also be self-hosted, allowing communities to maintain their own servers beyond the reach of centralized control. Combined with MLS encryption, which scrambles messages into unreadable data, this makes surveillance or censorship nearly impossible. Even if an ISP intercepts traffic, they&rsquo;ll see only encrypted metadata, revealing nothing about the message content.",
     },
     {
         question: "How does White Noise handle large groups without lag?",
-        answer: "MLS optimizes key distribution efficiency, reducing overhead as groups grow. Nostr relays handle message routing, allowing horizontal scaling. Tests show groups with 1,000+ members perform smoothly.",
+        answer: "MLS streamlines encryption for large groups by optimizing key distribution, reducing the computational load on devices. Meanwhile, Nostr relays handle message routing efficiently, ensuring smooth performance even in groups with over 1,000 members. This combination of protocol efficiency and decentralized infrastructure eliminates lag, making large-scale conversations as responsive as one-on-one chats.",
     },
     {
-        question: "Where is my chat data stored?",
-        answer: "Messages are encrypted and distributed across Nostr relays, but *never stored permanently*. Relays can't read your data, and you can prioritize privacy-focused relays or run your own.",
+        question: "Where does my data live?",
+        answer: "Messages in White Noise are encrypted end-to-end and temporarily relayed through several Nostr servers, which cannot read them and don&rsquo;t permanently store them. Relays act as transient delivery points, discarding data after transmission. Users can further prioritize privacy by selecting trusted relays or hosting their own, ensuring no single entity retains control over their communications.",
     },
     {
         question: "What happens if a relay goes offline?",
-        answer: "Nostr's redundancy lets users connect to multiple relays simultaneously. If one fails, others ensure message delivery. Groups remain active as long as at least one relay is operational.",
+        answer: "White Noise connects to multiple relays simultaneously, so if one fails or is blocked, others take over seamlessly. This redundancy ensures messages are delivered reliably, and groups remain active as long as at least one relay is operational. Users experience minimal disruption, even during network outages or targeted censorship attempts.",
     },
     {
         question: "Can admins remove or censor users in a group?",
-        answer: "Yes. MLS allows admins to <strong>cryptographically evict</strong> users, revoking their access to future messages. Removed users can't rejoin without an invite, and past messages remain secure.",
+        answer: "Group admins can evict members using MLS&rsquo;s cryptographic tools. Once removed, a user loses access to future messages and cannot rejoin without a new invite. Crucially, future conversations remain secure because encryption keys are rotated, preventing expelled members from decrypting newer messages.",
     },
     {
         question: "Is White Noise open source?",
-        answer: "Yes! Like most Nostr projects, White Noise is open source, allowing audits of its MLS implementation and fostering trust in its encryption claims.",
+        answer: "Yes, White Noise is fully open source, allowing anyone to inspect its code and verify security claims. Transparency is core to its design, fostering trust in its encryption methods and ensuring accountability. Open-source development also encourages collaboration, enabling rapid improvements and community-driven audits.",
     },
     {
         question: "Can I use White Noise on multiple devices?",
-        answer: "Absolutely. MLS supports 'leaf nodes' for each device, letting you join groups from phones, laptops, or tablets. Keys are securely stored on your device which allows each device to join the same groups.",
+        answer: "White Noise supports multi-device access through MLS&rsquo;s &ldquo;leaf nodes,&rdquo; which treat each device—phone, laptop, tablet—as a separate participant in the encryption process. This lets users join the same groups across devices without sacrificing security. Keys are stored locally on each device, ensuring seamless synchronization while maintaining end-to-end encryption.",
     },
     {
-        question: "How does White Noise ensure long-term security as technology evolves?",
-        answer: "White Noise leverages MLS's protocol agility, allowing seamless upgrades to quantum-resistant algorithms (e.g., CRYSTALS-Kyber) when standardized. Combined with Nostr's decentralized relay network—which can adopt new cryptographic primitives without central coordination—the system future-proofs itself against both computational advances and institutional interference.",
+        question: "How Does White Noise Stay Secure Long-Term?",
+        answer: "MLS&rsquo;s protocol agility allows White Noise to adopt new cryptographic standards, such as quantum-resistant algorithms, without overhauling the app. This future-proofs the app against evolving threats. Additionally, Nostr&rsquo;s decentralized relay network can independently upgrade cryptographic tools, ensuring resilience against both technological advances and institutional interference.",
+    },
+    {
+        question: "What if I don&rsquo;t trust public relays?",
+        answer: "Users concerned about public relays can self-host their own servers or join private relays operated by trusted communities. This gives full control over where data travels, eliminating reliance on third-party infrastructure. Self-hosting also shields users from potential relay abuse or data retention policies.",
+    },
+    {
+        question: "How Do I Know My Messages Are Private?",
+        answer: "MLS encryption ensures that only group members can decrypt messages. Relays receive only scrambled data, making it unreadable to operators or hackers. Even if a relay is compromised, attackers gain nothing but ciphertext—a jumble of characters with no meaningful information.",
+    },
+    {
+        question: "What Happens If My Device Gets Stolen?",
+        answer: "Immediately remove the compromised device from your groups using another device. MLS&rsquo;s post-compromise security guarantees that future messages remain protected, as encryption keys are rotated. Stolen devices cannot access new messages without rejoining through an invite, which admins can block entirely.",
+    },
+    {
+        question: "Is It Free to Use?",
+        answer: "Yes, White Noise is free and open source. While running a private relay or using premium relays may incur minor costs, the core application and basic usage are entirely free. This ensures accessibility while empowering users to customize their experience.",
     },
 ];
 
-let openFaqIndex: number | null = null;
+let openFaqIndices: number[] = [];
+
+function toggleFaq(index: number) {
+    if (openFaqIndices.includes(index)) {
+        openFaqIndices = openFaqIndices.filter((i) => i !== index);
+    } else {
+        openFaqIndices = [...openFaqIndices, index];
+    }
+}
 </script>
 
 <div class="hero flex flex-col md:flex-row items-center justify-between px-0 bg-glitch-950 bg-[url('/images/blocks-background.webp')] bg-no-repeat bg-center-bottom md:bg-right bg-cover">
     <div class="max-w-7xl mx-auto w-full flex flex-col md:flex-row items-center justify-between px-6 md:px-12">
         <div class="flex flex-col gap-4 max-w-xl flex-1 justify-center text-center md:text-left items-center md:items-start shrink-0">
             <h1 class="text-6xl font-bold text-glitch-50">White Noise</h1>
-            <p class="text-xl text-glitch-200 font-medium">A truly secure and private messenger that's lightning fast, infinitely scalable, and identity-free.</p>
+            <p class="text-xl text-glitch-200 font-medium">A truly secure and private messenger that&rsquo;s lightning fast, infinitely scalable, and identity-free.</p>
             <DownloadButton />
         </div>
         <div class="max-w-3xl shrink">
@@ -140,8 +164,8 @@ let openFaqIndex: number | null = null;
         <Accordion
             question={faq.question}
             answer={faq.answer}
-            open={openFaqIndex === i}
-            onClick={() => openFaqIndex = openFaqIndex === i ? null : i}
+            open={openFaqIndices.includes(i)}
+            onClick={() => toggleFaq(i)}
         />
     {/each}
 </div>

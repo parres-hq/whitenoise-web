@@ -13,13 +13,13 @@
     <section class="mb-12">
         <h2 class="text-3xl font-bold mb-6">The Foundations of Digital Liberty</h2>
         <blockquote class="border-l-4 border-cyan-300 pl-6 mb-6 italic text-glitch-700">
-            "Privacy is necessary for an open society in the electronic age. Privacy is not secrecy. A private matter is something one doesn't want the whole world to know, but a secret matter is something one doesn't want anybody to know. Privacy is the power to selectively reveal oneself to the world."
+            &ldquo;Privacy is necessary for an open society in the electronic age. Privacy is not secrecy. A private matter is something one doesn&rsquo;t want the whole world to know, but a secret matter is something one doesn&rsquo;t want anybody to know. Privacy is the power to selectively reveal oneself to the world.&rdquo;
         </blockquote>
         <p class="mb-4">
-            These words from Eric Hughes' Cypherpunk Manifesto still resonate today, reminding us that privacy isn't about hiding wrongdoing, but about maintaining control over our personal information.
+            These words from Eric Hughes&rsquo; Cypherpunk Manifesto still resonate today, reminding us that privacy isn't about hiding wrongdoing, but about maintaining control over our personal information.
         </p>
         <p>
-            The early internet pioneers envisioned a space free from centralized control. John Perry Barlow's Declaration of the Independence of Cyberspace boldly proclaimed cyberspace as "a world that all may enter without privilege or prejudice" where anyone could "express their beliefs without fear of being coerced into silence or conformity." This vision recognized that true freedom requires the ability to communicate without surveillance.
+            The early internet pioneers envisioned a space free from centralized control. John Perry Barlow&rsquo;s Declaration of the Independence of Cyberspace boldly proclaimed cyberspace as &ldquo;a world that all may enter without privilege or prejudice&rdquo; where anyone could &ldquo;express their beliefs without fear of being coerced into silence or conformity.&rdquo; This vision recognized that true freedom requires the ability to communicate without surveillance.
         </p>
     </section>
 
@@ -29,7 +29,7 @@
             Today, this vision faces unprecedented challenges. In Europe, the proposed Chat Control regulation threatens to implement mass surveillance of all internet communications, from emails to private chats to video calls. While ostensibly aimed at combating child abuse, such measures undermine the fundamental right to privacy guaranteed by Article 12 of the Universal Declaration of Human Rights.
         </p>
         <p class="mb-4">
-            Under these proposals, and many others like them being proposed around the world, even encrypted messaging apps like WhatsApp and Signal would be required to scan all communications using AI algorithms against government databases. Critics rightfully compare this to the dystopian surveillance described in Orwell's 1984. Once such infrastructure exists, its use can easily expand beyond its original purpose.
+            Under these proposals, and many others like them being proposed around the world, even encrypted messaging apps like WhatsApp and Signal would be required to scan all communications using AI algorithms against government databases. Critics rightfully compare this to the dystopian surveillance described in Orwell&rsquo;s 1984. Once such infrastructure exists, its use can easily expand beyond its original purpose.
         </p>
         <p>
             The implementation of such surveillance mechanisms would severely weaken data security and compromise professional confidentiality for lawyers, journalists, and doctors who rely on secure communications to protect their clients and sources. This represents a profound threat to both individual rights and institutional safeguards in a democratic society.
@@ -42,7 +42,7 @@
             In authoritarian regimes worldwide, the lack of secure communications has devastating consequences. When governments can monitor all communications, political dissidents face imprisonment, journalists cannot protect their sources, and ordinary citizens cannot freely express their opinions. The fundamental human rights of free speech and freedom of association become meaningless when every word is potentially monitored.
         </p>
         <blockquote class="border-l-4 border-cyan-300 pl-6 mb-6 italic text-glitch-700">
-            "Cryptography will ineluctably spread over the whole globe, and with it the anonymous transactions systems that it makes possible. For privacy to be widespread it must be part of a social contract. People must come together and deploy these systems for the common good."
+            &ldquo;Cryptography will ineluctably spread over the whole globe, and with it the anonymous transactions systems that it makes possible. For privacy to be widespread it must be part of a social contract. People must come together and deploy these systems for the common good.&rdquo;
         </blockquote>
     </section>
 
@@ -52,20 +52,20 @@
             The solution lies not in weakening encryption but in strengthening it. End-to-end encrypted messaging represents a technological implementation of our fundamental right to private conversation. It ensures that only the intended recipients can read messages, protecting everyone from hackers, corporate surveillance, and government overreach.
         </p>
         <blockquote class="border-l-4 border-cyan-300 pl-6 mb-6 italic text-glitch-700">
-            "A guarantee—with physics and mathematics, not with laws—that we can give ourselves real privacy of personal communications."
+            &ldquo;A guarantee&mdash;with physics and mathematics, not with laws&mdash;that we can give ourselves real privacy of personal communications.&rdquo;
         </blockquote>
         <p class="mb-4">
             As John Gilmore, one of the founding cypherpunks, eloquently stated, mathematical protections cannot be circumvented by changing political winds or authoritarian impulses.
         </p>
 
         <p class="mb-4">
-            Privacy is not opposed to security but is itself an essential form of security—protection from surveillance, manipulation, and control. As we navigate an increasingly digital world, we must defend the right to communicate privately not as a luxury or a shield for wrongdoing, but as a fundamental requirement for human dignity and freedom.
+            Privacy is not opposed to security but is itself an essential form of security&mdash;protection from surveillance, manipulation, and control. As we navigate an increasingly digital world, we must defend the right to communicate privately not as a luxury or a shield for wrongdoing, but as a fundamental requirement for human dignity and freedom.
         </p>
         <p class="mb-4">
             The battle for secure communications is ultimately about what kind of society we wish to build. Will we embrace a future where every thought and message is potentially scrutinized by algorithms and authorities? Or will we defend the right to private conversation that has sustained free societies throughout history?
         </p>
         <p class="font-bold">
-            The choice is ours to make, but the stakes couldn't be higher. Privacy isn't just a personal preference—it's the foundation upon which all other freedoms rest.
+            The choice is ours to make, but the stakes couldn&rsquo;t be higher. Privacy isn&rsquo;t just a personal preference&mdash;it&rsquo;s the foundation upon which all other freedoms rest.
         </p>
     </section>
 </div>

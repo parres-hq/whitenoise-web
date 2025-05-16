@@ -9,7 +9,7 @@ let { question, answer, open = false, onClick } = $props();
     aria-expanded={open}
     aria-controls={question}
   >
-    <span class="text-xl font-semibold transition-colors duration-200 {open ? 'text-glitch-900 font-bold' : 'text-glitch-700 font-semibold'}">{question}</span>
+    <span class="text-xl font-semibold transition-colors duration-200 {open ? 'text-glitch-900 font-bold' : 'text-glitch-700 font-semibold'}">{@html question}</span>
     <svg
       class="w-6 h-6 text-glitch-400 transition-transform duration-200" style:transform={open ? 'rotate(180deg)' : 'rotate(0deg)'}
       fill="none"
