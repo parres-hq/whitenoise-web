@@ -114,6 +114,18 @@ let openFaqIndex: number | null = null;
     </div>
 </div>
 
+<div class="max-w-7xl mx-auto w-full px-6 md:px-12 my-8 flex flex-col gap-4 items-center">
+    <h2 class="text-2xl font-medium text-glitch-800">Supported By</h2>
+    <div class="flex flex-col md:flex-row gap-4 md:gap-x-8 my-4">
+        <a href="https://opensats.org" target="_blank" class="py-4 px-8 md:py-6 md:px-12 bg-glitch-950 flex items-center justify-center w-64 hover:bg-glitch-800 transition-colors">
+            <img src="/images/opensats.svg" alt="OpenSats Logo" class="max-w-48 w-40 bg-transparent" />
+        </a>
+        <a href="https://hrf.org" target="_blank" class="py-4 px-8 md:py-6 md:px-12 bg-glitch-950 flex items-center justify-center w-64 hover:bg-glitch-800 transition-colors">
+            <img src="/images/hrf.svg" alt="Human Rights Foundation Logo" class="max-w-64" />
+        </a>
+    </div>
+</div>
+
 <div class="max-w-7xl mx-auto w-full">
     <div class="flex flex-col gap-8 md:gap-12 px-6 md:px-12 py-8 md:py-12 justify-center text-center md:text-left items-center md:items-start">
         {#each featureCards as card}
