@@ -151,7 +151,7 @@ function toggleFaq(index: number) {
 </div>
 
 <div class="max-w-7xl mx-auto w-full">
-    <div class="flex flex-col gap-8 md:gap-12 px-6 md:px-12 py-8 md:py-12 justify-center text-center md:text-left items-center md:items-start">
+    <div class="flex flex-col gap-8 px-6 md:px-12 py-8 md:py-12 justify-center text-center md:text-left items-center md:items-start">
         {#each featureCards as card}
             <FeatureSection featureCard={card} />
         {/each}
