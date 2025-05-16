@@ -62,7 +62,7 @@ const faqs = [
     },
     {
         question: "How does encryption work in White Noise?",
-        answer: "MLS provides *post-compromise security*: even if a device is compromised, future messages remain secure. Keys are dynamically rotated, and encryption is applied before messages hit Nostr relays, ensuring only group members can decrypt content.",
+        answer: "White Noise uses the MLS protocol, which provides both <strong>post-compromise security</strong> and <strong>forward secrecy</strong>: even if a device is compromised, past messages are secure & future messages regain their security. Keys are dynamically rotated, and encryption is applied before messages hit Nostr relays, ensuring only group members can decrypt content.",
     },
     {
         question: "Can governments or ISPs block White Noise?",
